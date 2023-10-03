@@ -28,8 +28,8 @@ void seive(int n){
 }
 
 int main(){
-    int t; cin >> t;
-    int k;
+    int t; cin >> t; 
+    int k; 
     seive(100000);
     for(int i;i<t;i++){
         cin >> k;
