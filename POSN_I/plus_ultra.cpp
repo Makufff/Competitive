@@ -1,6 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 /* ********************************************** */
 /* POSN CAMP 1                                    */
 /*                                                */
@@ -16,7 +13,7 @@ using namespace std;
 /*
 
     เราจะเห็นจากโจทย์ว่าขอบเขตที่โจทย์ให้มีคือเลขไม่เกิน 2^99
-    ซึ่งมากกว่า int , long int , long long int , unsigned long long int แน่นอน
+    ซึ่งมากกว่า int , long int , long long int , unsigned long long int แน่นอน!!
     งั้นเราคิดใหม่ (?)
     ถ้าเราวิธีคิดที่เป็นการบวกเลขตอนประถมละ (?)
     มาดูๆๆ เช่น 9999 + 9999 = (?)
@@ -61,10 +58,13 @@ using namespace std;
 
 */
 
+#include <bits/stdc++.h>
+using namespace std;
 
 int main(){
     ios_base::sync_with_stdio(0); cin.tie(0) ;
     string a , b ;
+    // b = "12345"
     cin >> a >> b ;
     // setup
     if (a.length() > b.length()){
@@ -72,7 +72,7 @@ int main(){
         for (int i = b.length(); i < a.length(); i++){
             tmp += "0" ;
         }
-        for (char i : b){
+        for (char i : b){ //for each
             tmp += i ;
         }
         b = tmp ;
@@ -101,9 +101,7 @@ int main(){
         
         if (sum > 9 and i != 0) {
             tod = sum/10 ; 
-       
             r = sum - (tod * 10) ;
-       
             ans += to_string(r) ;
             
         }else if (i == 0 and sum > 9){
@@ -119,6 +117,11 @@ int main(){
     for (int i = 0; i < ans.length() / 2; i++)
         swap(ans[i], ans[ans.length() - i - 1]);
 
-    cout << "ans = " << ans ;
+    // 89991
+    // 1   8
+    // 19 98
+    // 19998
+
+    cout << ans ;
     return 0 ; 
 }
