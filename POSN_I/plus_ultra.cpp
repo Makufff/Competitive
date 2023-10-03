@@ -66,7 +66,6 @@ int main(){
     string a , b ;
     // b = "12345"
     cin >> a >> b ;
-    // setup
     if (a.length() > b.length()){
         string tmp = "" ; 
         for (int i = b.length(); i < a.length(); i++){
