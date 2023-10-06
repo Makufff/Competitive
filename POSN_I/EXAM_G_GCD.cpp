@@ -1,7 +1,7 @@
 /* ********************************************** */
 /* POSN CAMP 1                                    */
 /*                                                */
-/*   EXAM_F_FibWord                               */
+/*   EXAM_C1_65_1_Sum                             */
 /*                                                */
 /*   By: Makufff <makufff.tanapat@gmail.com>      */
 /*                                                */
@@ -13,25 +13,20 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-vector<int> fib(55);
-char fiboo(int n,int k){
-    if(n == 1) return 'A';
-    if(n == 2) return 'B';
-    if(fib[n-2] < k) return fiboo(n-1,k-fib[n-2]);
-    else return fiboo(n-2,k);
-}
-
 int main(){
     ios_base::sync_with_stdio(0), cin.tie(0);
 
-    int t; cin >> t;
+    int n; cin >> n;
+    int arr[n];
+    for(int i=0;i<n;i++) cin >> arr[i];
 
-    fib[1] = 1;
-    for(int i=2 ; i<=50 ; i++) fib[i] = fib[i-2] + fib[i-1];
-    while(t--){
-        int n,k; cin >> n >> k;
-        cout << fiboo(n,k) << "\n";
+    int minimum=INT_MIN;
+    for(int i = 0 ; i < n ; i++){
+        for(int j=i+1;j<n;j++){
+            minimum = max(minimum,__gcd(arr[i],arr[j]));
+        }
     }
-    
+    cout << minimum;
+
     return 0;
 }
