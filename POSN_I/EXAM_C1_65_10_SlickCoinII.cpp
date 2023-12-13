@@ -22,8 +22,7 @@ int main() {
     arr[0] = 2e9;
 
     for (int i = 1; i <= n; i++) {
-        int x;
-        cin >> x;
+        int x; cin >> x;
         arr[i] = x;
         if (arr[i - 1] < arr[i]) ans += arr[i] - arr[i - 1];
     }

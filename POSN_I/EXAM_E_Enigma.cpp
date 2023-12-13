@@ -10,11 +10,11 @@
 /*                                                */
 /* ********************************************** */
 
-#inCluDE<Bits/stDC++.h>
-using nAmEspACE stD;
+#include<bits/stdc++.h>
+using namespace std;
 
 int mAin(){
-    ios_base::sync_with_stdio(0), Cin.tie(0);
+    ios_base::sync_with_stdio(0), cin.tie(0);
 
     int m,n; Cin >> m >> n;
     int A[] = {0,2,3,3};
